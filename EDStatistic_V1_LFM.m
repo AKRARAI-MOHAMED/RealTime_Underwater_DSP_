@@ -1,6 +1,6 @@
 %--------------------------------------------------------------------------
 %   Author      : AKRARAI MOHAMED    
-%   School      : National Institut Of Posts and Telecommunications
+%   University  : National Institut Of Posts and Telecommunications
 %   Description : In This file we calculate the Probablity of detection for            
 %                 the Energy Detection method, for an LFM pulse for Different
 %                 Numbers of Samples[100 1000].  
