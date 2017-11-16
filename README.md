@@ -19,6 +19,11 @@ And on the receiver side, we choose two techniques for signal detection:
 * Energy detection
 
 ```
+Results:
+
+The simulation figures attached to project, show that Matched filtering has a higher Probability of detection. Furthermore, the probability of detection using a Matched Filetr is higher with an LFM signal.
+
+Also the LFM signal probability of detection does not depend on the number of samples used, in contrary to the pure tone pulse that requires higher sample numbers to improve the Pd 
 
 ## Second phase:
 
