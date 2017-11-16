@@ -32,9 +32,9 @@ V = zeros([10 1000]);
     Y = awgn(Xp,SNR,'measured'); % the signal power -28.3 dBW
     Noise = Y - Xp;
     % rms(Noise)^2; measure the noise power.
-    La  = abs(conv(Noise,Xp));
+    La  = conv(abs(Noise),abs(Xp));
     LambdAmf = sum(La)/N;
-    Sta = abs(conv(Y,Xp));
+    Sta = conv(abs(Y),abs(Xp));
     Tmf = sum(Sta)/N;
     
     if  (Tmf > LambdAmf)    

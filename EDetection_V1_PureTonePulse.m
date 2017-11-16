@@ -33,9 +33,9 @@ V = zeros([10 1000]);
     Y = awgn(Xp,SNR,'measured'); % the signal power -28.3 dBW
     Noise = Y - Xp;
     % rms(Noise)^2; measure the noise power.
-    La  = abs(abs(fft(Noise).^2));
+    La  = abs(fft(Noise).^2);
     LambdAmf = sum(La)/N;
-    Sta = abs(abs(fft(Y).^2));
+    Sta = abs(fft(Y).^2);
     Tmf = sum(Sta)/N;
     
     if  (Tmf > LambdAmf)    
@@ -49,16 +49,10 @@ end
 Nsamples = 1:1:10;
 figure;
 plot(Nsamples*100,Pd(1,:),Nsamples*100,Pd(2,:),Nsamples*100,Pd(3,:),Nsamples*100,Pd(4,:))
-title('Pd(N) for Matched Filter Method, Pure Tone signal')
+title('Pd(N) for Energy detection Method, Pure Tone signal')
 xlabel('N samples')
 ylabel('Probability of Detection')
 grid
 hold off
 
 legend('-40 dB','-30 dB','-20 dB','-10 dB')
-
-% figure;
-% plot(real(sig))
-% figure;
-% plot(real(Y))
-% title('Noised signal')
